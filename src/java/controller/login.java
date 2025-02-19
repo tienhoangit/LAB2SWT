@@ -71,40 +71,45 @@ public class login extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-protected void doPost(HttpServletRequest request, HttpServletResponse response)
-throws ServletException, IOException {
-    String email = request.getParameter("email");
-    String pass = request.getParameter("pass");
-    CustomerDao c = new CustomerDao();
-    Security s = new Security();
-    ArrayList<Customer> list = c.getCustomer();  // Lỗi có thể xảy ra nếu list == null
-    Customer b = null;
-    
-    for(Customer cu : list){  // Lỗi nếu list == null
-        if(cu.getEmail().compareTo(email) == 0){
-            b = cu;  // Không dừng vòng lặp, có thể ghi đè dữ liệu không mong muốn
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        String email = request.getParameter("email");
+        String pass = request.getParameter("pass");
+        CustomerDao c = new CustomerDao();
+        Security s = new Security();
+        ArrayList<Customer> list = c.getCustomer();
+        Customer b = null;
+        for(Customer cu : list){
+            if(cu.getEmail().compareTo(email) == 0){
+                b = cu;
+            }
         }
-    }
-    
-    String decode = s.decode(b.getPass()); // Lỗi NullPointerException nếu b == null
-    if(decode.compareTo(pass) == 0){
-        Cookie cookie = new Cookie("uid", b.getId()+"");
-        cookie.setMaxAge(60*60*24*7);
-        response.addCookie(cookie);
-        HttpSession session = request.getSession();
-        session.setAttribute("user", b);
         
-        if(b.getRole() == 1){
-            response.sendRedirect("admin_home");
-        } else{
-            response.sendRedirect("home");
+        if(b != null){
+            String decode = s.decode(b.getPass());
+            if(decode.compareTo(pass)== 0){
+                Cookie cookie = new Cookie("uid", b.getId()+"");
+                cookie.setMaxAge(60*60*24*7);
+                response.addCookie(cookie);
+                HttpSession session = request.getSession();
+                session.setAttribute("user", b);
+                
+                if(b.getRole() == 1){
+                    response.sendRedirect("admin_home");
+                    
+                } else{
+                    response.sendRedirect("home");
+                }
+            } else {
+                request.setAttribute("err", "Password is wrong!");
+                request.getRequestDispatcher("view/user/login.jsp").forward(request, response);
+            }
+        } else {
+            request.setAttribute("err", "Email not exist!");
+            request.getRequestDispatcher("view/user/login.jsp").forward(request, response);
+            
         }
-    } else {
-        request.setAttribute("err", "Password is wrong!");
-        request.getRequestDispatcher("view/user/login.jsp").forward(request, response);
     }
-}
-
 
     /** 
      * Returns a short description of the servlet.
