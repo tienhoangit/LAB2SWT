@@ -1,0 +1,611 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header{
+    height: 60vh !important;
+    position: relative;
+    background-image: url(https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/04/brutal-musician-with-electric-guitar-on-stage-e1649060480855.jpg) !important ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+nav{
+    width: 80vw;
+    
+    display: flex;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content:space-between ;
+ 
+}
+#nav{
+    border-bottom: 1px solid #ccc;
+}
+nav img{
+    width: 170px;
+    height: 65px;  
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+    width: 70%;
+
+}
+.nav-item ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.nav-item ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.nav-item .nav-logo{
+    width: 35%;
+    border-right: 1px solid #737272;
+    
+}
+.nav-item .nav-logo img{
+    margin: 13px 0;
+}
+.nav-acc ul{
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    list-style: none;
+}
+.nav-acc ul a{
+    text-decoration: none;
+    color: white;
+}
+.carousel{
+    margin-top: 50px;
+    display: flex;
+    color: white;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.carousel{
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%,-50% ) !important;
+}
+.quantity{
+    position: absolute;
+    color: white;
+    background-color:#df9438; 
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 15px;
+    height: 16px;
+    text-align: center;
+    line-height: 14px;
+    top: -5px;
+    right: -10px
+}
+
+#about{
+    color: white;
+    padding-top: 100px;
+    
+}
+.about-item{
+    width: 70vw;
+}
+.about-head p{
+    font-size: 20px;
+    font-weight: 900;
+}
+.about-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-left{
+    width: 310px;
+}
+.title-left h2 span{
+    color: #df9438;
+    font-weight: 900;
+}
+.title-right{
+    
+    position: relative;
+}
+.title-right p{
+    font-size: 40px;
+    font-weight: 900;
+    color: #df9438;
+}
+.title-right::before{
+    content: '';
+    width: 300%;
+    height: 1px;
+    background-color: #737272;
+    display: block;
+    position: absolute;
+    left: -310px;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.about-body{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+.about-body img{
+    width: 100%;
+    height: 100%;
+}
+.body-left{
+    width: 70%;
+}
+.body-right{
+    width: 50%;
+}
+.body-right p{
+    color: #8f8f8f;
+}
+.body-right-item{
+    display: flex;
+    align-items: center;
+}
+.body-right-1{
+    border: 1px solid  #8f8f8f;
+    padding: 20px;
+    font-size: 30px;
+
+}
+.body-right-1 p:last-child{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+.body-right-1 i{
+    display: block;
+    text-align: center;
+    color: #df9438;
+}
+.body-right-1 .plus{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+}
+.body-right-1 .plus span{
+    font-size: 26px;
+    color: #df9438;
+    font-weight: 600;
+}
+.body-right-2 ul{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.body-right-2 .list{
+    width: 15px;
+    height: 15px;
+    background-color: #df9438;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+}
+.body-right-2 .list::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.body-right-2 li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.body-right button{
+    background-color: #df9438;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+#service{
+    color: white;
+    padding-top: 100px;
+}
+.service-body{
+    background-image: url(https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/musician-playing-guitar-while-performing-on-a-concert-on-a-festival-e1648707085483.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 70vw;
+    position: relative;
+    padding: 0;
+}
+.service-body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.service-body-container{
+    position: relative !important;
+    z-index: 2 !important;
+    color: white;
+    display: flex;
+    padding: 50px 0;
+    justify-content: center ;
+    gap: 50px;
+}
+.service-item{
+    border-right:  1px solid #737272;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.service-item:last-child{
+    border-right: none;
+}
+.service-item i{
+    font-size: 40px;
+    color: #df9438;
+}
+.service-item-text h3{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.service-item-text p{
+    margin-bottom: 0;
+    color: #8f8f8f;
+    font-weight: 500;
+}
+#product{
+    color: white;
+    padding-top: 100px;
+
+}
+.product-item{
+    width: 70vw;
+}
+.product-item>p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.product-item>h3{
+    text-align: center;
+
+}
+.product-item>h3 span{
+    font-weight: 600;
+    color: #df9438;
+    font-size: 30px;
+}
+.product-container{
+    margin-top: 50px;
+}
+.product-card .card-head{
+    width: 100%;
+    border: 1px solid #737272;
+    height: 350px;
+}
+.product-card .card-head img{
+    width: 100%;
+    height: 100%;
+}
+.product-card .card-body{
+    text-align: center;
+    margin-top: 10px;
+}
+.product-card .card-body p:first-child{
+    font-size: 25px;
+    font-weight: 600;
+}
+.product-card .card-body p:last-child{
+    font-size: 23px;
+    font-weight: 600;
+    color: #df9438;
+}
+.product-card .card-bottom{
+    display: flex;
+    justify-content: center;
+}
+
+
+.product-card .card-bottom button{
+    background-color: #df9438;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin-top: 20px;
+    margin-top: 0;
+}
+#new{
+   padding-top: 100px;
+    color: white;
+}
+.new-item{
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.new-left{
+    width: 60%;
+}
+.new-left-1{
+    position: relative;
+    margin-bottom: 20px;
+    background-position:left center ;
+    height: 200px;
+    background-image: url(https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/electric-guitar-sounds-top-view-of-the-electric-guitar-body-against-of-the-wooden-floor-music-e1649228414708-1024x453.jpg);
+}
+.new-left-1::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.new-left-2{
+    position: relative;
+    background-position:right center ;
+    height: 200px;
+    background-image: url(https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/acoustic-guitar-in-the-hands-of-a-guitarist--1024x682.jpg);
+}
+.new-left-2::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.new-text{
+    position: absolute;
+    z-index: 2;
+}
+.new-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #df9438;
+}
+.new-right{
+    
+    position: relative;
+    height: 420px;
+    width: 50%;
+    background-image: url(https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/musician-playing-guitar-while-performing-on-a-concert-on-a-festival-1024x682.jpg);
+}
+.new-right::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.new-left-1 .new-text{
+    right: 20px;
+    bottom: 10px;
+}
+.new-left-1 .new-text p{
+   text-align: end;
+   font-size: 18px;
+}
+.new-left-2 .new-text{
+    left: 20px;
+    bottom: 10px;
+}
+.new-right .new-text{
+    bottom: 20px;
+    right: 20px;
+}
+.footer-32892 {
+    background-color: #111111;
+    padding: 7rem 0;
+    color: #888;
+    font-size: 16px; }
+    .footer-32892, .footer-32892 h3 {
+      font-family: "Poppins", sans-serif; }
+    .footer-32892 h3 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 30px; }
+    .footer-32892 p {
+      font-family: "Source Serif Pro", serif; }
+    .footer-32892 .row.gallery {
+      margin-right: -5px;
+      margin-left: -5px; }
+      .footer-32892 .row.gallery > [class^="col-"],
+      .footer-32892 .row.gallery > [class*=" col-"] {
+        padding-right: 5px;
+        padding-left: 5px; }
+    .footer-32892 .gallery a {
+      display: block;
+      margin-bottom: 10px;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; }
+      .footer-32892 .gallery a:hover {
+        opacity: .5; }
+    .footer-32892 .quick-info li {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px; }
+      .footer-32892 .quick-info li a {
+        color: #fff; }
+      .footer-32892 .quick-info li .icon {
+        font-size: 20px;
+        color: #f88020; }
+    .footer-32892 .subscribe {
+      position: relative; }
+      .footer-32892 .subscribe .form-control {
+        background-color: #292b31;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 30px;
+        height: 55px;
+        padding-left: 30px;
+        padding-right: 130px;
+        border: none;
+        color: #fff; }
+        .footer-32892 .subscribe .form-control::-webkit-input-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+        .footer-32892 .subscribe .form-control::-moz-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+        .footer-32892 .subscribe .form-control:-ms-input-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+        .footer-32892 .subscribe .form-control:-moz-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+      .footer-32892 .subscribe .btn-submit {
+        background: #f88020;
+        height: 47px;
+        border-radius: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #fff;
+        font-weight: bold;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+    .footer-32892 .tweets li {
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-style: italic;
+      font-family: "Source Serif Pro", serif; }
+      .footer-32892 .tweets li span {
+        color: #fff; }
+    .footer-32892 .footer-menu-wrap {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem !important;
+      margin-top: 7rem; }
+    .footer-32892 .footer-menu {
+      margin-bottom: 0; }
+      .footer-32892 .footer-menu li {
+        display: inline-block; }
+        @media (max-width: 767.98px) {
+          .footer-32892 .footer-menu li {
+            display: block; } }
+        .footer-32892 .footer-menu li a {
+          padding: 10px;
+          display: inline-block;
+          color: #fff; }
+          @media (max-width: 767.98px) {
+            .footer-32892 .footer-menu li a {
+              display: block;
+              padding-left: 0px; } }
+        .footer-32892 .footer-menu li:first-child a {
+          padding-left: 0; }
+    .footer-32892 .site-logo {
+      color: #fff;
+      font-size: 20px; 
+}
+#categories{
+    padding-top: 100px;
+    color: white;
+}
+.categories-item{
+    width: 70vw;
+}
+
+.categories-item h2 span{
+    font-weight: 600;
+    color: #df9438;   
+}
+
+.categories-item img{
+    width: 100%;
+}
+.categories-list .item-bottom{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.categories-list .item-top{
+    border: 1px solid #292b31;
+    padding: 10px;
+}
+.checkout{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-left: auto;
+    margin-top: 30px;
+}
+.checkout .total{
+    display: flex;
+    justify-content: space-between;
+    border-top:  1px solid #737272;
+    border-bottom:  1px solid #737272;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.checkout .total p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}

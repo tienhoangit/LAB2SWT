@@ -1,0 +1,60 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 24, 2024, 1:30:17 AM
+    Author     : Dell
+*/
+
+#nav{
+    margin-top: 15px;
+}
+#nav > li{
+    display: inline-block;
+    min-width: 20px;
+}
+#nav .second{
+     min-width: 120px;
+}
+#nav .first{
+     min-width: 50px;
+}
+#nav li{
+    position: relative; 
+   
+}
+#nav li a{
+    text-decoration: none; 
+    padding: 0px 0px;
+    display:block;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+#nav .subnave li:hover a,
+#nav>li:hover>a{
+    background-color:rgba(0,0,1,0.5) ;
+    color: white;
+}
+#nav li:hover .subnave{
+    display: block;
+}
+#nav, .subnave{
+    list-style-type: none;
+}
+#nav .subnave{
+    padding: 0;
+    display: none;
+    min-width: 120px;
+    position: absolute;
+    top : 100%;
+    background-color: gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+}
+#nav .subnave a{
+    color: white;
+    margin: 0px;
+    padding: 5px 5px;
+    text-align: center;
+}
