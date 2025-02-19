@@ -98,7 +98,8 @@ public class admin_update extends HttpServlet {
             ArrayList<Type> list = daot.getAllType();
             request.setAttribute("list", list);
 
-            if (name == "" || img == "" || des == "" || sold1 == "" || price1 == "" || tid1 == "") {
+            if (Objects.equals(name, "") || Objects.equals(img, "") || Objects.equals(des, "") || 
+                Objects.equals(sold1, "") || Objects.equals(price1, "") || Objects.equals(tid1, "")) {
 
                 request.setAttribute("err", "You must input information!");
                 request.getRequestDispatcher(ADMIN_UPDATE_PAGE).forward(request, response);
