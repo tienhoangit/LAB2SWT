@@ -96,7 +96,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   justify-content: space-between;
   height: 80px;
   background: #fff;
-  display: flex;
   align-items: center;
   position: fixed;
   width: calc(100% - 240px);
