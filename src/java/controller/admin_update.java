@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import model.*;
 
 public class admin_update extends HttpServlet {
+    private static final String ADMIN_UPDATE_PAGE = "view/admin/update.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -65,7 +66,7 @@ public class admin_update extends HttpServlet {
         request.setAttribute("p", p);
         request.setAttribute("list", list);
 
-        request.getRequestDispatcher("view/admin/update.jsp").forward(request, response);
+        request.getRequestDispatcher(ADMIN_UPDATE_PAGE).forward(request, response);
     }
 
     /**
@@ -100,16 +101,16 @@ public class admin_update extends HttpServlet {
             if (name == "" || img == "" || des == "" || sold1 == "" || price1 == "" || tid1 == "") {
 
                 request.setAttribute("err", "You must input information!");
-                request.getRequestDispatcher("view/admin/update.jsp").forward(request, response);
+                request.getRequestDispatcher(ADMIN_UPDATE_PAGE).forward(request, response);
 
             } else {
                 if (price < 0) {
 
                     request.setAttribute("err", "You must input price> 0!");
-                    request.getRequestDispatcher("view/admin/update.jsp").forward(request, response);
+                    request.getRequestDispatcher(ADMIN_UPDATE_PAGE).forward(request, response);
                 } else if (sold < 0) {
                     request.setAttribute("err", "You must input sold>= 0!");
-                    request.getRequestDispatcher("view/admin/update.jsp").forward(request, response);
+                    request.getRequestDispatcher(ADMIN_UPDATE_PAGE).forward(request, response);
                 } else {
 
                     Product p = new Product(id, name, tid + "", sold, price, des, img);
@@ -121,7 +122,7 @@ public class admin_update extends HttpServlet {
 
         } catch (NumberFormatException e) {
             request.setAttribute("err", "You must input price is number more than 0 and sold number!");
-            request.getRequestDispatcher("view/admin/update.jsp").forward(request, response);
+            request.getRequestDispatcher(ADMIN_UPDATE_PAGE).forward(request, response);
         }
 
     }
