@@ -240,11 +240,12 @@ public class ProductDao extends DBContext {
         }
         sql.append(")");
 
-        PreparedStatement st = null;
-        ResultSet rs = null;
+
 
         try {
-            st = con.prepareStatement(sql.toString());
+            PreparedStatement st = con.prepareStatement(sql.toString());
+     ResultSet rs = st.executeQuery()
+
             for (int i = 0; i < brands.length; i++) {
                 st.setString(i + 1, brands[i]);
             }
