@@ -33,10 +33,10 @@
                 return false;
             }
         }
-        else {
-            if($(input).val().trim() == ''){
+        else if($(input).val().trim() == ''){
+
                 return false;
-            }
+            
         }
     }
 
