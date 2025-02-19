@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package java.dal;    
 
 import java.math.BigDecimal;
@@ -36,10 +32,8 @@ public class OrderDao extends DBContext {
                 ProductOrder p = new ProductOrder(rs.getInt(1), rs.getString(2),null, rs.getString(3), rs.getString(4), rs.getInt(5), 0, 0);
                 list.add(p);
             }
-        } catch (Exception
-                
-                
-                e) {
+        } catch (Exception e) {
+            System.out.println(e);
         }
         return list;
 
@@ -48,7 +42,6 @@ public class OrderDao extends DBContext {
     public void addOrderDetial(OrderDetail o){
           String sql = "insert into OrderDetail(pid,oid,quantity,price, total) values(?,?,?,?,?)";
           try {
-
               st = con.prepareStatement(sql);
               BigDecimal roundedPrice = BigDecimal.valueOf(o.getPrice()).setScale(2, RoundingMode.HALF_UP);
               BigDecimal roundedTotal = BigDecimal.valueOf(o.getTotal()).setScale(2, RoundingMode.HALF_UP);
@@ -60,6 +53,7 @@ public class OrderDao extends DBContext {
               st.executeUpdate();
                       
           } catch (Exception e) {
+              System.out.println(e);
           }
       }
 
@@ -76,6 +70,7 @@ public class OrderDao extends DBContext {
                 id = rs.getInt("id");
             }
         } catch (Exception e) {
+            System.out.println(e);
         }
 
         return id;
@@ -89,7 +84,7 @@ public class OrderDao extends DBContext {
             st = con.prepareStatement(sql);
             st.setInt(1, uid);
             rs = st.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) { // changed 'if' to 'while'
                 int i = rs.getInt(1);
                 list.add(i);
             }
@@ -131,6 +126,7 @@ public ProductOrder updateImgProD(int id, String pname,String tname,String des,i
                  po = new ProductOrder(id, pname, rs.getString(1), tname, des, quantity, 0  , 0);
             }
         } catch (Exception e) {
+            System.out.println(e);
         }
         return po;
 
@@ -198,6 +194,7 @@ public ProductOrder updateImgProD(int id, String pname,String tname,String des,i
             }
             
         } catch (Exception e) {
+            System.out.println(e);
         }
         return list;
         
@@ -214,6 +211,7 @@ public ProductOrder updateImgProD(int id, String pname,String tname,String des,i
             }
             
         } catch (Exception e) {
+            System.out.println(e);
         }
         return list;
         
@@ -231,6 +229,7 @@ public ProductOrder updateImgProD(int id, String pname,String tname,String des,i
               st.executeUpdate();
                       
           } catch (Exception e) {
+              System.out.println(e);
           }
       }
 
