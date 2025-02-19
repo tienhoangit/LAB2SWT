@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 
-    <head xml:lang>
+    <head lang="en">
         <!-- Basic -->
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
