@@ -1,4 +1,4 @@
-OderDao (/*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -239,4 +239,4 @@ public ProductOrder updateImgProD(int id, String pname,String tname,String des,i
         ArrayList<OrderC> list = dao.searchOrderCby("2024-10-03");
         System.out.println(list.get(0).getName());
     }
-})
+}
