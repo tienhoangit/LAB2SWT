@@ -20,7 +20,7 @@ public class DBContext {
             String user = "sa";
             String pass = "manhhuy2104sql";
             String url = "jdbc:sqlserver://localhost:1433;databaseName=DataShop";
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDrive");
             connection = DriverManager.getConnection(url, user, pass);
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
