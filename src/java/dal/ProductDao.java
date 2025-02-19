@@ -255,7 +255,7 @@ public class ProductDao extends DBContext {
                         rs.getInt(4), rs.getFloat(5), rs.getString(6), rs.getString(7));
                 list.add(p);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         } finally {
             // Đảm bảo đóng ResultSet và PreparedStatement
@@ -266,7 +266,7 @@ public class ProductDao extends DBContext {
                 if (st != null) {
                     st.close();
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Error closing resources: " + e.getMessage());
             }
         }
