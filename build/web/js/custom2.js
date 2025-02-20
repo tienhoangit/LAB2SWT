@@ -1,11 +1,10 @@
 (function() {
 	'use strict';
-
-	var tinyslider = function() {
-		var el = document.querySelectorAll('.testimonial-slider');
-
+	
+	const tinyslider = function() {
+		let el = document.querySelectorAll('.testimonial-slider'); 
 		if (el.length > 0) {
-			var slider = tns({
+			const slider = tns({
 				container: '.testimonial-slider',
 				items: 1,
 				axis: "horizontal",
