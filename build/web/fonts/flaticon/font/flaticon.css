@@ -1,4 +1,4 @@
-	/*
+x`	/*
   	Flaticon icon font: Flaticon
   	Creation date: 25/09/2018 08:24
   	*/
@@ -23,7 +23,7 @@
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
+   font-family: Flaticon, sans-serif;
         font-size: 20px;
 font-style: normal;
 margin-left: 20px;
