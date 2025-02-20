@@ -98,6 +98,9 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
             case "name-desc":
                 list.sort((p1, p2) -> p2.getName().compareToIgnoreCase(p1.getName()));
                 break;
+            default:
+                System.out.println("Invalid sort option: " + sort);
+                break;
         }
     }
 

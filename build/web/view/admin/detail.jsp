@@ -2,7 +2,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
@@ -18,7 +18,7 @@
 
                 <div class="search-box">
                     <input type="text" name="text" value="${requestScope.name}" id="search" placeholder="Search..." />
-                    <i onclick="searchP()" class="bx bx-search"></i>
+                     <button onclick="searchP()" class="bx bx-search" aria-label="Search"></button>
                 </div>
                 <div class="profile-details">
                     <img src="./images/admin.jpg" alt="Avata Admin" />

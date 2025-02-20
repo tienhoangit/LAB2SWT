@@ -18,7 +18,7 @@
 
                 <div class="search-box">
                     <input type="text" name="text" value="${requestScope.name}" id="search" placeholder="Search..." />
-                    <i onclick="searchP()" class="bx bx-search"></i>
+                    <i onclick="searchP()" onKeyDown="searchP()" class="bx bx-search" tabindex="0"></i>
                 </div>
                 <div class="profile-details">
                     <img src="./images/admin.jpg" alt="Avata Admin" />
