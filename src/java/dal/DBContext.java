@@ -11,21 +11,24 @@ import java.util.logging.Logger;
  */
 
 
-public class DBContext {
-    protected Connection connection;
-    public DBContext()
-    {
-       
-        try {
-            String user = "sa";
-            String pass = "manhhuy2104sql";
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=DataShop";
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            connection = DriverManager.getConnection(url, user, pass);
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
+public DBContext() {
+    try {
+        // Lấy thông tin từ biến môi trường
+        String user = System.getenv("DB_USER");
+        String pass = System.getenv("DB_PASS");
+        String url = System.getenv("DB_URL");
+
+        // Đảm bảo rằng biến môi trường đã được thiết lập
+        if (user == null || pass == null || url == null) {
+            throw new IllegalArgumentException("Database credentials are not set in environment variables.");
         }
-        
+
+        // Tải driver và kết nối
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        connection = DriverManager.getConnection(url, user, pass);
+
+    } catch (ClassNotFoundException | SQLException | IllegalArgumentException ex) {
+        Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
     }
-  
 }
+
