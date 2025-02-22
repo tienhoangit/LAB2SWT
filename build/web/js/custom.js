@@ -44,6 +44,7 @@ function myMap() {
 }
 
 // client section owl carousel
+$(document).ready(function () {
 $(".client_owl-carousel").owlCarousel({
     loop: true,
     margin: 0,
@@ -66,4 +67,5 @@ $(".client_owl-carousel").owlCarousel({
             items: 2
         }
     }
+});
 });
