@@ -39,8 +39,9 @@
                         </div>
                     </c:if>
                     <div class="mb-3" style="display: none">
-                        <label  class="form-label">id</label>
-                        <input  value="${requestScope.p.id}" name="id" type="text" class="form-control"  >
+                        <label for="productId" class="form-label">id</label>
+<input id="productId" value="${requestScope.p.id}" name="id" type="text" class="form-control">
+
 
                     </div>
                     <div class="mb-3">
